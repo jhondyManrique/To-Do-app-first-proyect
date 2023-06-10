@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+    <link rel="stylesheet" href="/frontend/css/styles.css" />
+  </head>
+  <body>
+    <!--we create main container -->
+    <main>
+      <!--top of the page -->
+      <header>
+        <h1>TO DO APP</h1>
+        <h3>don't trust your mind</h3>
+      </header>
+
+      <!--it contains all related by the task list: buttons, inputs and text -->
+      <article>
+        <!--interactive with user: buttons and inputs-->
+        <div>
+          <h3>Tasks:</h3>
+          <button class="green" onclick="addTask()">add task</button>
+          <button class="green" onclick="getAllTasks()">View all</button>
+          <button class="green" onclick="getTaskById()">View one</button>
+          <button class="red" onclick="deleteAllTasks()">Delete all</button>
+        </div>
+        <div>
+          <input type="text" id="taskInput" placeholder="write id or title" />
+        </div>
+
+        <!--table that will be manipulated by js-->
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Title</th>
+              <th scope="col">Status</th>
+              <th scope="col" colspan="3">Options</th>
+            </tr>
+          </thead>
+          <tbody id="taskBody"></tbody>
+        </table>
+      </article>
+
+      <!--liks to info app-->
+      <span>
+        <a href="contact.html ">Contact with us</a>
+        <a href="aboutApp.html">about app</a>
+      </span>
+    </main>
+    <!--import file js -->
+    <script src="js/api.js"></script>
+  </body>
+</html>
